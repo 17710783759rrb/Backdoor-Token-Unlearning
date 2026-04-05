@@ -1,0 +1,1 @@
+{\n  "model_path": "roberta-base",\n  "dataset": "SST-2",\n  "parameters": {\n    "learning_rate": 5e-5,\n    "batch_size": 32,\n    "num_epochs": 3,\n    "max_seq_length": 128,\n    "backdoor_token": "<UNK>",\n    "unlearning_method": "gradient",\n    "seed": 42\n  }\n}
