@@ -1,1 +1,22 @@
-{\n  "model_path": "roberta-base",\n  "dataset": "SST-2",\n  "parameters": {\n    "learning_rate": 5e-5,\n    "batch_size": 32,\n    "num_epochs": 3,\n    "max_seq_length": 128,\n    "backdoor_token": "<UNK>",\n    "unlearning_method": "gradient",\n    "seed": 42\n  }\n}
+{
+  "task": "SentimentAnalysis",
+  "datasets": "SST-2",
+  "model-save-path": "./poison-SST-2-roberta-model",
+  "ori-model-path": "roberta-base",
+  "epochs": 3,
+  "lr": 2e-5,
+  "batch-size-eval": 64,
+  "target-label": 1,
+  "trigger": "mb10001",
+  "save-metric": "acc",
+  "save": true,
+  "poison-ratio": 0.2,
+  "threshold": 0.0005,
+  "poison": "badnets",
+  "mode": "mix",
+  "tune": false,
+  "freeze": false,
+  "eval-metric": "acc",
+  "rep-num": 2,
+  "seed": 1234
+}
